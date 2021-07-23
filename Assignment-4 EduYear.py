@@ -17,14 +17,14 @@ for i in a:
         
 # list of numbers duplicates, uniques
 list = [ 3, 6, 9, 12, 3, 30, 15, 9, 45, 36, 12, 12]
-dupItems = []
-uniqItems = {}
-for x in list:
-   if x not in uniqItems:
-      uniqItems[x] = 1
+d = []
+u = []
+for i in list:
+   if (list.count(i) == 1):
+      u.append(i)
    else:
-      if uniqItems[x] == 1:
-         dupItems.append(x)
-      uniqItems[x] += 1
-print(dupItems)
-print(uniqItems)
+       d.append(i)
+print("duplicates:",end=" ")
+print(sorted(set(d)))
+print("uniques:",end=" ")
+print(sorted(set(u)))
